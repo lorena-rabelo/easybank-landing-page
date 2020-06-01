@@ -20,7 +20,7 @@ h1 {
 
 h2 {
   font-size: 30px;
-  font-weight: 500; 
+  font-weight: 500;
   margin-bottom: 40px;
 }
 
@@ -41,12 +41,13 @@ h6 {
 }
 
 .mockup {
-  overflow: hidden; /* Esconde o conteúdo excedente */
+  overflow: hidden;
+  /* Esconde o conteúdo excedente */
   margin-top: -800px;
   margin-left: 55vw;
   margin-bottom: -144px;
   object-fit: cover;
-  z-index:1;
+  z-index: 1;
 }
 
 .container {
@@ -92,7 +93,7 @@ h6 {
 .header__text {
   max-width: 425px;
   margin-top: -470px;
-  margin-left: 13% ;
+  margin-left: 13%;
   position: absolute;
 }
 
@@ -109,10 +110,13 @@ h6 {
   max-width: 610px;
   margin-top: 40px;
 }
+
 .why__section {
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .why__section__item {
@@ -133,22 +137,24 @@ h6 {
 .article__section {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .articles__card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 8px 8px 0px 0px ;
+  border-radius: 8px 8px 0px 0px;
 }
-.articles__card__text{
+
+.articles__card__text {
   padding: 10px 25px 25px 25px;
 }
+
 .articles__card p {
   margin-top: 15px;
   font-size: 12px;
 }
-
 
 .footer {
   background-color: #2d314d;
@@ -165,26 +171,27 @@ h6 {
   margin-top: 40px;
 }
 
-.footer__redes a{
+.footer__redes a {
   margin-right: 20px;
 }
 
 .footer__links {
   display: flex;
-  color:#eaebfd;
+  color: #eaebfd;
 }
 
-.footer__links__column{
+.footer__links__column {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
 }
 
-.footer__links__column a{
-  color:#eaebfd; 
-  margin: 20px 40px; 
+.footer__links__column a {
+  color: #eaebfd;
+  margin: 20px 40px;
 }
-.footer__links__column li{
-  margin-bottom: 15px; 
+
+.footer__links__column li {
+  margin-bottom: 15px;
 }
 
 .footer p {
@@ -202,4 +209,46 @@ h6 {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+  h1 {
+    max-width: 40%;
+  }
+  .header__text p {
+    max-width: 40%;
+  }
+
+  .why__section {    
+    justify-content: space-around;    
+    text-align: center;
+}
+
+.why__section__item {
+   margin: 0 50px;
+}
+  .why__section__item:nth-child(3) {
+    margin-top: 50px;
+  }
+  .why__section__item:last-child {
+    margin-top: 50px;
+  }
+  
+  .articles__card {
+    margin: 0 30px;
+  }
+
+  .articles__card:nth-child(3) {
+    margin-top: 50px;
+}
+  .articles__card:last-child {
+    margin-top: 50px;
+}
+
+  .article__section {  
+    justify-content: space-around;  
+}
 }
