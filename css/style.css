@@ -40,6 +40,10 @@ h6 {
   z-index: -100;
 }
 
+.background-mobile {
+  display: none;
+}
+
 .mockup {
   overflow: hidden;
   /* Esconde o conteúdo excedente */
@@ -67,11 +71,26 @@ h6 {
   box-sizing: border-box;
 }
 
+.btn-request:hover {
+  transition: 0.3s;
+  cursor: pointer;
+  opacity: 65%;
+}
+
 .nav {
   padding: 20px;
   background-color: #ffffff;
   z-index: 1000;
   position: relative;
+}
+
+.nav__mobile {
+  display: none;
+}
+
+ul li a:hover {
+  color: #5a5a5a;
+  border-bottom: 3px solid #31d35c;
 }
 
 .nav__content {
@@ -134,6 +153,14 @@ h6 {
   border-radius: 8px;
 }
 
+.articles__card:hover {
+  cursor: pointer;
+}
+
+h4:hover {
+  color: #34c29a;
+}
+
 .article__section {
   display: flex;
   justify-content: space-between;
@@ -166,6 +193,10 @@ h6 {
   justify-content: space-between;
 }
 
+.logo__footer {
+  margin-bottom: 20px;
+}
+
 .footer__redes {
   display: flex;
   margin-top: 40px;
@@ -187,7 +218,7 @@ h6 {
 
 .footer__links__column a {
   color: #eaebfd;
-  margin: 20px 40px;
+  margin: 20px 10px;
 }
 
 .footer__links__column li {
@@ -221,34 +252,179 @@ h6 {
   .header__text p {
     max-width: 40%;
   }
-
-  .why__section {    
-    justify-content: space-around;    
+  .why__section {
+    justify-content: space-around;
     text-align: center;
-}
-
-.why__section__item {
-   margin: 0 50px;
-}
+  }
+  .why p {
+    text-align: start;
+  }
+  .why__section__item {
+    margin: 0 50px;
+  }
   .why__section__item:nth-child(3) {
     margin-top: 50px;
   }
   .why__section__item:last-child {
     margin-top: 50px;
   }
-  
   .articles__card {
     margin: 0 30px;
   }
-
   .articles__card:nth-child(3) {
     margin-top: 50px;
-}
+  }
   .articles__card:last-child {
     margin-top: 50px;
+  }
+  .article__section {
+    justify-content: space-around;
+  }
 }
 
-  .article__section {  
-    justify-content: space-around;  
+@media screen and (max-width: 768px) {
+  h1 {
+    max-width: 50%;
+    font-size: 40px;
+    line-height: 50px;
 }
+  h2 {
+    text-align: center;
+  }
+  nav .btn-request {
+    display: none;
+  }
+  .nav__links {
+    display: none;
+  }
+  .nav__mobile {
+    display: block;
+  }
+  .why p {
+    text-align: center;
+  }
+  .why__section__item:first-child {
+    margin-bottom: 40px;
+  }
+  .footer {
+    text-align: center;
+  }
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__links {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .footer__links__column {
+    text-align: start;
+  }
+  .footer__redes {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 14px;
+  }
+  header {
+    height: 100vh;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .mockup {
+    text-align: center;
+    margin: -65vh auto 0 auto;
+    object-fit: cover;
+  }
+  .mockup img {
+    max-width: 95vw;
+  }
+  /* nav .btn-request {
+    display: none;
+  }
+  .nav__links {
+    display: none;
+  }
+  .nav__mobile {
+    display: block;
+  } */
+  .background {
+    display: none;
+  }
+  .background-mobile {
+    display: block;
+    background: url(../images/bg-intro-mobile.svg) no-repeat;
+    background-position-x: right;
+    background-position-y: -50px;
+    /* background-size: 50%; */
+    height: 280px;
+    z-index: -100;
+  }
+  .header__text {
+    max-width: 100%;
+    margin-top: 20px;
+    /* margin-left: 13%; */
+    position: absolute;
+    text-align: center;
+  }
+  h1 {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 30px;
+  }
+  .header__text p {
+    max-width: 80%;
+    margin: 20px auto 40px;
+  }
+  .btn-header {
+    margin-top: 20px;
+  }
+  .why {
+    text-align: center;
+    padding: 50px 0px;
+  }
+  .why__section {
+    margin-top: 60px;
+  }
+  .why__section__item {
+    margin-top: 50px;
+  }
+  .why__section__item:first-child {
+    margin-top: 0px;
+  }
+  .articles {
+    text-align: center;
+    margin: 50px 0px;
+  }
+  .articles__card {
+    margin-top: 50px;
+  }
+  .articles__card:first-child {
+    margin-top: 0px;
+  }
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__links {
+    margin-bottom: 40px;
+  }
+  .footer__redes {
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .footer__links {
+    display: block;
+  }
+  .footer__links__column {
+    text-align: center;
+  }
 }
